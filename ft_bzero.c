@@ -6,15 +6,15 @@
 /*   By: poaliiev <poaliiev@student.42.fr >         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 13:29:34 by poaliiev          #+#    #+#             */
-/*   Updated: 2023/11/08 14:36:37 by poaliiev         ###   ########.fr       */
+/*   Updated: 2023/11/13 13:49:08 by poaliiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    *ft_bzero(void *s, size_t n)
+void	*ft_bzero(void *s, size_t n)
 {
-    return (ft_memset(s, 0, n));
+	return (ft_memset(s, 0, n));
 }
 
 /*int    main()

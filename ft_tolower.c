@@ -6,23 +6,22 @@
 /*   By: poaliiev <poaliiev@student.42.fr >         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 16:11:37 by poaliiev          #+#    #+#             */
-/*   Updated: 2023/11/07 16:16:57 by poaliiev         ###   ########.fr       */
+/*   Updated: 2023/11/13 14:08:07 by poaliiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
-    if (c >= 65 && c <= 90)
-    {
-        return (c + 32);
-    }
-    return c;
-    
+	if (c >= 65 && c <= 90)
+	{
+		return (c + 32);
+	}
+	return (c);
 }
 
-int main()
-{
-    printf("%c", ft_tolower('A'));
-}
+// int main()
+// {
+//     printf("%c", ft_tolower('A'));
+// }

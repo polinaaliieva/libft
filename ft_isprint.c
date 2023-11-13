@@ -6,17 +6,17 @@
 /*   By: poaliiev <poaliiev@student.42.fr >         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 12:34:51 by poaliiev          #+#    #+#             */
-/*   Updated: 2023/11/07 19:34:16 by poaliiev         ###   ########.fr       */
+/*   Updated: 2023/11/13 12:35:49 by poaliiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
-    if (c >= 32 && c <= 126)
-    {
-        return (1);
-    }
-    return (0);
+	if (c >= 32 && c <= 126)
+	{
+		return (1);
+	}
+	return (0);
 }
