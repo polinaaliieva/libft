@@ -6,13 +6,13 @@
 /*   By: poaliiev <poaliiev@student.42.fr >         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 15:28:19 by poaliiev          #+#    #+#             */
-/*   Updated: 2023/11/10 15:56:02 by poaliiev         ###   ########.fr       */
+/*   Updated: 2023/11/15 18:25:22 by poaliiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    *ft_strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
-    
+	
 }
