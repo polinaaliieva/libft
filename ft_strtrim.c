@@ -5,26 +5,47 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: poaliiev <poaliiev@student.42.fr >         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/17 10:41:09 by poaliiev          #+#    #+#             */
-/*   Updated: 2023/11/17 12:22:56 by poaliiev         ###   ########.fr       */
+/*   Created: 2023/11/20 12:02:25 by poaliiev          #+#    #+#             */
+/*   Updated: 2023/11/20 12:55:53 by poaliiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(const char *s1, const char *set)
+char	*ft_strncpy(char *dest, const char *src, size_t n)
 {
-	char	*new;
 	size_t	i;
 
-	while (s1[i] == set )
+	i = 0;
+	while (src[i] != '\0' && i < n)
 	{
-		/* code */
+		dest[i] = src[i];
+		i++;
 	}
-	
-	while (/* condition */)
+	while (i < n)
 	{
-		/* code */
+		dest[i] = '\0';
+		i++;
 	}
-	
+	return (dest);
+}
+
+char	*ft_strtrim(const char *s1, const char *set)
+{
+	size_t	i;
+	size_t	j;
+	char	*trimmed;
+
+	i = 0;
+	j = 0;
+	while (s1[i] && ft_strchr(set, s1[i]))
+		i++;
+	while (s1[i + j] && ft_strchr(set, s1[i + j]) == NULL)
+		j++;
+	trimmed = malloc(j + 1);
+	if (!trimmed)
+		return (NULL);
+	ft_strncpy(trimmed, s1 + i, j);
+	trimmed[j] = '\0';
+	return (trimmed);
 }
