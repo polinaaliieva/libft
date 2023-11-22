@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: poaliiev <poaliiev@student.42.fr >         +#+  +:+       +#+        */
+/*   By: polinaaliieva <polinaaliieva@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 12:02:25 by poaliiev          #+#    #+#             */
-/*   Updated: 2023/11/20 12:55:53 by poaliiev         ###   ########.fr       */
+/*   Updated: 2023/11/20 17:58:23 by polinaaliie      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dest, const char *src, size_t n)
+static char	*ft_strncpy(char *dest, const char *src, size_t n)
 {
 	size_t	i;
 
