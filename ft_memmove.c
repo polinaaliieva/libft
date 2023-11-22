@@ -6,7 +6,7 @@
 /*   By: poaliiev <poaliiev@student.42.fr >         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 14:51:23 by poaliiev          #+#    #+#             */
-/*   Updated: 2023/11/17 14:03:02 by poaliiev         ###   ########.fr       */
+/*   Updated: 2023/11/22 19:05:54 by poaliiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned char	*tmp_dest;
 	unsigned char	*tmp_src;
-	size_t	i;
+	size_t			i;
 
 	i = 0;
 	tmp_dest = (unsigned char *)dest;
 	tmp_src = (unsigned char *)src;
-	if (!src || !dest)
+	if (!src && !dest)
 		return (NULL);
 	if (tmp_dest > tmp_src)
 	{

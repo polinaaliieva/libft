@@ -6,7 +6,7 @@
 /*   By: poaliiev <poaliiev@student.42.fr >         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 13:58:51 by poaliiev          #+#    #+#             */
-/*   Updated: 2023/11/13 13:54:35 by poaliiev         ###   ########.fr       */
+/*   Updated: 2023/11/22 19:59:34 by poaliiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	int	i;
 
 	i = 0;
+	if (!dest && !src)
+		return (dest);
 	while (n > 0)
 	{
 		((unsigned char *)dest)[i] = ((unsigned char *)src)[i];

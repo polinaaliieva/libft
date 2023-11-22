@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polinaaliieva <polinaaliieva@student.42    +#+  +:+       +#+        */
+/*   By: poaliiev <poaliiev@student.42.fr >         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 14:47:07 by poaliiev          #+#    #+#             */
-/*   Updated: 2023/11/21 20:25:02 by polinaaliie      ###   ########.fr       */
+/*   Updated: 2023/11/22 14:36:51 by poaliiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,9 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 
 	i = 0;
 	if (!little[i])
-		//return ((char *)big);
-		return (&big[i]);
+		return ((char *)big);
 	if (!len)
 		return (NULL);
-	
 	while (big[i] && i < len)
 	{
 		j = 0;
@@ -31,18 +29,17 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		{
 			j++;
 			if (!little[j])
-				//return ((char *) (big + i));
-				return (&big[i]);
+				return ((char *)(big + i));
 		}
 		i++;
 	}
 	return (NULL);
 }
 
-int main()
-{
-	char *big = "hey hey im tired";
-	char *little = "im";
-	char	*res = ft_strnstr(big, little, 10);
-	printf("%s\n", res);
-}
+// int main()
+// {
+// 	char *big = "hey hey im tired";
+// 	char *little = "im";
+// 	char	*res = ft_strnstr(big, little, 10);
+// 	printf("%s\n", res);
+// }

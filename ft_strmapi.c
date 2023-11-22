@@ -6,7 +6,7 @@
 /*   By: poaliiev <poaliiev@student.42.fr >         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 12:19:40 by poaliiev          #+#    #+#             */
-/*   Updated: 2023/11/17 12:50:50 by poaliiev         ###   ########.fr       */
+/*   Updated: 2023/11/22 19:41:18 by poaliiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 	size_t	i;
 
 	i = 0;
+	if (!s)
+		return (NULL);
 	new = malloc(ft_strlen(s) + 1);
 	if (!new)
 		return (NULL);
@@ -29,5 +31,3 @@ char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 	new[i] = '\0';
 	return (new);
 }
-
-

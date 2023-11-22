@@ -6,7 +6,7 @@
 /*   By: poaliiev <poaliiev@student.42.fr >         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 16:24:13 by poaliiev          #+#    #+#             */
-/*   Updated: 2023/11/15 10:08:14 by poaliiev         ###   ########.fr       */
+/*   Updated: 2023/11/22 19:42:15 by poaliiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_putstr_fd(char *s, int fd)
 	int	i;
 
 	i = 0;
+	if (!s)
+		return ;
 	while (s[i] != '\0')
 	{
 		write(fd, &s[i], 1);

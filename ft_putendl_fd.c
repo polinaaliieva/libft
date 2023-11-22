@@ -6,7 +6,7 @@
 /*   By: poaliiev <poaliiev@student.42.fr >         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 10:10:51 by poaliiev          #+#    #+#             */
-/*   Updated: 2023/11/15 10:18:40 by poaliiev         ###   ########.fr       */
+/*   Updated: 2023/11/22 19:59:22 by poaliiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_putendl_fd(char *s, int fd)
 	int	i;
 
 	i = 0;
+	if (!s)
+		return ;
 	while (s[i] != '\0')
 	{
 		write(fd, &s[i], 1);
