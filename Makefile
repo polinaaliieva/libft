@@ -36,10 +36,24 @@ ft_substr.c \
 ft_tolower.c \
 ft_toupper.c \
 
+BONUS = \
+ft_lstadd_back_bonus.c \
+ft_lstadd_front_bonus.c \
+ft_lstclear_bonus.c \
+ft_lstdelone_bonus.c \
+ft_lstiter_bonus.c \
+ft_lstlast_bonus.c \
+ft_lstmap_bonus.c \
+ft_lstnew_bonus.c \
+ft_lstsize_bonus.c \
+
+
 
 HEAD = libft.h
 
 OBS = ${SRC:.c=.o}
+
+BONUSOBS := ${BONUS:.c=.o}
 
 CC = cc
 
@@ -54,12 +68,14 @@ $(NAME): ${OBS}
 ${OBS}: ${SRC}
 	${CC} ${FLAGS} -c ${SRC}
 
+bonus: ${OBS} ${BONUSOBS}
+		@ar rc $(NAME) ${OBS} ${BONUSOBS}
 so:
 	$(CC) -nostartfiles -fPIC $(FLAGS) $(SRC)
-	gcc -nostartfiles -shared -o libft.so $(OBS)
+	gcc -nostartfiles -shared -o libft.so $(OBS) $(BONUSOBS)
 
 clean:
-	rm -f ${OBS}
+	rm -f ${OBS} ${BONUSOBS}
 
 fclean: clean
 	rm -f ${NAME}
